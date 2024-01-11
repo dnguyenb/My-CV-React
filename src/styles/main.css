@@ -484,4 +484,28 @@ a:visited {
   .homeContent h2 {
     font-size: 1.8rem !important;
   }
+}
+.notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  max-width: 1200px;
+  background: #2a1d52;
+  border-radius: 25px;
+  text-align: center;
+}
+.notFound h3 {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: #ddd;
+}
+.notFound a {
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  background: #36D0EA;
+  transition: 0.3s;
+}
+.notFound a:hover {
+  background: #4FEDD2;
 }/*# sourceMappingURL=main.css.map */
