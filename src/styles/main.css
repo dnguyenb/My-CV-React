@@ -202,7 +202,9 @@ input[type=checkbox], input[type=radio] {
 
 /* Centering */
 /* BASIC SETTINGS */
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -213,11 +215,11 @@ html {
 }
 
 body {
-  margin: 1rem auto;
+  margin: 0.4rem auto;
   max-width: 1200px;
   font-family: "Nova Round", sans-serif;
-  color: black;
-  min-height: 100vh;
+  color: #333;
+  background-color: #ddd;
 }
 
 button {
@@ -230,12 +232,12 @@ li {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #333;
   cursor: pointer;
 }
 
 a:visited {
-  color: black;
+  color: #333;
 }
 
 /* BASIC PAGES SETTINGS */
@@ -270,11 +272,12 @@ a:visited {
 }
 
 .sidebar {
-  background-color: #2a1d52;
+  background: linear-gradient(130deg, #2a1d52 20%, #452a97 80%);
   font-family: "Nova Round", sans-serif;
-  height: auto;
-  min-height: 95vh;
-  width: 264px;
+  box-shadow: 1px 2px 6px rgba(51, 51, 51, 0.377);
+  height: 100%;
+  min-height: 98vh;
+  min-width: 264px;
   border-radius: 25px;
   display: grid;
   grid-template-columns: 1fr;
@@ -301,7 +304,7 @@ a:visited {
   box-shadow: 0 0 0 4px rgb(99, 164, 233), 0 0 0 8px #4FEDD2, 0 0 0 12px #6C77F4;
 }
 .sidebar .id .idContent h3 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   margin-top: 1.5rem;
@@ -321,7 +324,7 @@ a:visited {
   position: relative;
 }
 .sidebar .navigation ul li:hover i {
-  transform: translate(3px, 3px);
+  transform: translate(8px, 6px);
 }
 .sidebar .navigation ul li a {
   color: #36D0EA;
@@ -336,7 +339,7 @@ a:visited {
   transition: 0.2s ease;
 }
 .sidebar .navigation ul li span {
-  margin-left: 2rem;
+  margin-left: 2.7rem;
 }
 .sidebar .socialNetwork {
   grid-area: 3;
@@ -366,7 +369,8 @@ a:visited {
   background-color: #4FEDD2;
 }
 .sidebar .signature {
-  margin: 2rem 0;
+  margin-top: 0.5rem;
+  padding-bottom: 1rem;
   text-align: center;
   letter-spacing: 0.1rem;
   font-size: 0.7rem;
@@ -411,7 +415,7 @@ a:visited {
   }
   .sidebar ul i {
     font-size: 1.4rem;
-    transform: translateY(-1px) !important;
+    transform: translateY(-3px) !important;
   }
   .sidebar ul span {
     display: none;
@@ -419,13 +423,13 @@ a:visited {
 }
 .home .homeContent {
   background: linear-gradient(115deg, #2a1d52 25%, transparent 100%);
-  min-height: 95vh;
+  min-height: 98vh;
   width: 100%;
   min-height: 500px;
   border-radius: 25px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 1px 3px #333;
+  box-shadow: 1px 2px 6px rgba(51, 51, 51, 0.377);
 }
 .home .homeContent:after {
   content: "";

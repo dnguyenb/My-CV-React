@@ -1,9 +1,10 @@
 .sidebar {
-    background-color: $color-1;
+    background: linear-gradient(130deg, $color-1 20%, #452a97 80%);
     font-family: $font-1;
-    height: auto;
+    box-shadow: $shadow;
+    height: 100%;
     min-height: $minHeight;
-    width: 264px;
+    min-width: 264px;
     border-radius: $borderRadius;
     display: grid;
     grid-template-columns: 1fr;
@@ -34,7 +35,7 @@
             }
 
             h3 {
-                font-size: 1.3rem;
+                font-size: 1.1rem;
                 text-transform: uppercase;
                 letter-spacing: 0.2rem;
                 margin-top: 1.5rem;
@@ -58,7 +59,7 @@
                 position: relative; // Les icônes seront en position absolute.
 
                 &:hover i {
-                    transform: translate(3px, 3px);
+                    transform: translate(8px, 6px);
                 }
 
                 a {
@@ -77,7 +78,7 @@
                 }
 
                 span {
-                    margin-left: 2rem;
+                    margin-left: 2.7rem;
                 }
             }
         }
@@ -120,7 +121,8 @@
     // Partie signature de la sidebar :
 
     .signature {
-        margin: 2rem 0;
+        margin-top: 0.5rem;
+        padding-bottom: 1rem;
         text-align: center;
         letter-spacing: .1rem;
         font-size: .7rem;
@@ -176,7 +178,7 @@
 
             i {
                 font-size: 1.4rem;
-                transform: translateY(-1px) !important;
+                transform: translateY(-3px) !important;
             }
 
             span {
