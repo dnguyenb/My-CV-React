@@ -489,6 +489,231 @@ a:visited {
     font-size: 1.8rem !important;
   }
 }
+.knowledges .knowledgesContent {
+  min-height: 98vh;
+  color: #2a1d52;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 38% 1fr 1fr;
+  grid-template-rows: 70% 30%;
+  grid-template-areas: "L E E" "O O S";
+}
+.knowledges .knowledgesContent .languagesFrameworks,
+.knowledges .knowledgesContent .experience,
+.knowledges .knowledgesContent .otherSkills,
+.knowledges .knowledgesContent .softSkills {
+  background: linear-gradient(260deg, #6C77F4 0%, #737efa 100%);
+  border-radius: 25px;
+  padding: 0.8rem;
+  box-shadow: 1px 2px 6px rgba(51, 51, 51, 0.377);
+}
+.knowledges .knowledgesContent h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-family: "Dosis", sans-serif;
+  color: #36D0EA;
+  text-shadow: 0 0 8px rgba(51, 51, 51, 0.201);
+  text-transform: uppercase;
+}
+.knowledges .knowledgesContent .languagesFrameworks {
+  grid-area: L;
+  margin-bottom: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 43% 57%;
+  grid-template-areas: "L" "F";
+}
+.knowledges .knowledgesContent .languagesFrameworks .languagesDisplay {
+  grid-area: L;
+  margin-bottom: 1rem;
+}
+.knowledges .knowledgesContent .languagesFrameworks .frameworkDisplay {
+  grid-area: F;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.knowledges .knowledgesContent .languagesFrameworks .flexLine {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  height: 70%;
+}
+.knowledges .knowledgesContent .languagesFrameworks h3 {
+  margin-bottom: 0.3rem;
+}
+.knowledges .knowledgesContent .languagesFrameworks .years {
+  font-size: 0.65rem;
+  display: flex;
+  justify-content: right;
+  color: #ddd;
+}
+.knowledges .knowledgesContent .languagesFrameworks .years span {
+  width: 38%;
+}
+.knowledges .knowledgesContent .languagesFrameworks .years span:nth-child(2) {
+  text-align: center;
+  width: 18%;
+}
+.knowledges .knowledgesContent .languagesFrameworks .years span:nth-child(3) {
+  text-align: right;
+  width: 44%;
+}
+.knowledges .knowledgesContent .languagesFrameworks .years span:nth-child(2)::before, .knowledges .knowledgesContent .languagesFrameworks .years span:nth-child(3)::before {
+  content: "";
+  background: rgba(180, 179, 179, 0.5);
+  position: absolute;
+  height: 146px;
+  width: 1px;
+  transform: translate(0.5rem, 1.5rem);
+}
+.knowledges .knowledgesContent .languagesFrameworks .languagesList {
+  padding-top: 0.5rem;
+}
+.knowledges .knowledgesContent .languagesFrameworks .languagesList li {
+  color: #2a1d52;
+}
+.knowledges .knowledgesContent .languagesFrameworks .languagesList .progressBar {
+  height: 0.4rem;
+  background: transparent;
+  border-radius: 50px;
+  margin-top: 0.2rem;
+  position: relative;
+}
+.knowledges .knowledgesContent .languagesFrameworks .languagesList .progressBar:after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(260deg, #4FEDD2 0%, #36D0EA 100%);
+  border-radius: 50px;
+  height: 0.4rem;
+  width: 100%;
+  animation: line 2s ease-out forwards;
+}
+@keyframes line {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.knowledges .knowledgesContent .experience {
+  grid-area: E;
+  margin: 0 0 0.5rem 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 11% 1fr 1fr 1fr;
+  grid-template-areas: "1" "2" "3" "4";
+}
+.knowledges .knowledgesContent .experience h3 {
+  grid-area: 1;
+}
+.knowledges .knowledgesContent .experience h4 {
+  font-size: 1.1rem;
+  color: #4FEDD2;
+}
+.knowledges .knowledgesContent .experience h5 {
+  color: #36D0EA;
+  padding: 0.05rem 0 0.1rem 1rem;
+}
+.knowledges .knowledgesContent .experience p {
+  text-align: justify;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+}
+.knowledges .knowledgesContent .experience .exp-1 {
+  grid-area: 2;
+}
+.knowledges .knowledgesContent .experience .exp-2 {
+  grid-area: 3;
+}
+.knowledges .knowledgesContent .experience .exp-3 {
+  grid-area: 4;
+}
+.knowledges .knowledgesContent .softSkills {
+  grid-area: S;
+}
+.knowledges .knowledgesContent .softSkills ul {
+  height: 80%;
+  display: grid;
+  padding-left: 2rem;
+}
+.knowledges .knowledgesContent .softSkills ul li i {
+  position: absolute;
+  color: #36D0EA;
+}
+.knowledges .knowledgesContent .softSkills ul li span {
+  position: absolute;
+  transform: translate(37px, -4px);
+}
+.knowledges .knowledgesContent .otherSkills {
+  grid-area: O;
+  margin-right: 0.5rem;
+}
+.knowledges .knowledgesContent .otherSkills .list {
+  width: 100%;
+  height: 100%;
+  padding-left: 2rem;
+}
+.knowledges .knowledgesContent .otherSkills .list ul {
+  height: 80%;
+  display: grid;
+}
+.knowledges .knowledgesContent .otherSkills .list ul i {
+  color: #36D0EA;
+  margin-right: 0.6rem;
+}
+
+@media screen and (max-width: 950px) {
+  .knowledgesContent h3 {
+    font-size: 1.2rem !important;
+  }
+  .knowledgesContent .languagesList {
+    padding-top: 0.2rem !important;
+  }
+  .knowledgesContent p {
+    font-size: 0.8rem;
+  }
+  .knowledgesContent .softSkills,
+  .knowledgesContent .otherSkills {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  .knowledgesContent h4 {
+    font-size: 0.9rem !important;
+  }
+  .knowledgesContent h5 {
+    font-size: 0.6rem !important;
+    padding: 0.2rem 1rem !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .knowledgesContent {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr 1fr 180px 180px !important;
+  }
+  .knowledgesContent .languages {
+    grid-area: 1 !important;
+  }
+  .knowledgesContent .experience {
+    grid-area: 2 !important;
+    margin-left: 0 !important;
+  }
+  .knowledgesContent .softSkills {
+    grid-area: 4 !important;
+    margin-top: 0.5rem !important;
+  }
+  .knowledgesContent .otherSkills {
+    grid-area: 3 !important;
+    margin-right: 0 !important;
+  }
+}
 .notFound {
   display: flex;
   justify-content: center;

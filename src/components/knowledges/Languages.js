@@ -4,12 +4,13 @@ import ProgressBar from './ProgressBar';
 export default class Languages extends Component {
 	state = {
 		languages: [
-			{ id: 1, value: 'Javascript', xp: 1.8 },
+			{ id: 1, value: 'Javascript', xp: 1.5 },
 			{ id: 2, value: 'Python', xp: 0.5 },
 		],
 		frameworks: [
 			{ id: 1, value: 'React', xp: 1.5 },
 			{ id: 2, value: 'Sass', xp: 2.5 },
+			{id: 3, value: 'Material UI', xp: 0.5 }
 		],
 	};
 

@@ -15,13 +15,13 @@ const ProgressBar = (props) => {
                 {
                     props.languages.map((item) => {
                         let xpYears = 2;
-                        let progressBar = item.xp / xpYears * 100 + '%'
+                        let progressBar = item.xp / xpYears * 100 + '%';
 
                         return (
-                            <li key={item.id} className='languagesList'>
-                                <div>{item.value}</div>
+                            <div key={item.id} className='languagesList'>
+                                <li>{item.value}</li>
                                 <div className='progressBar' style={{ width:progressBar}}></div>
-                            </li>
+                            </div>
                         )
                     })
                 }
