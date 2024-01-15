@@ -603,10 +603,11 @@ a:visited {
 }
 .knowledges .knowledgesContent .experience {
   grid-area: E;
+  gap: 0.4rem;
   margin: 0 0 0.5rem 0.5rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 11% 1fr 1fr 1fr;
+  grid-template-rows: 8% 1fr 1fr 1fr;
   grid-template-areas: "1" "2" "3" "4";
 }
 .knowledges .knowledgesContent .experience h3 {
@@ -630,6 +631,9 @@ a:visited {
 }
 .knowledges .knowledgesContent .experience .exp-2 {
   grid-area: 3;
+}
+.knowledges .knowledgesContent .experience .exp-2 a {
+  color: rgb(225, 225, 154);
 }
 .knowledges .knowledgesContent .experience .exp-3 {
   grid-area: 4;
