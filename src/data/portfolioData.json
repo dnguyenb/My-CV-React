@@ -32,16 +32,16 @@
 		"id": "5",
 		"name": "Kanap",
 		"languages": "JavaScript",
-		"languagesIcons": "fab fa-css3-alt fa-brands fa-sass",
+		"languagesIcons": "fa-brands fa-js",
 		"source": "https://github.com/dnguyenb/P5-kanap",
 		"info": "Créer la partie frontend du site e-commerce de Kanap. Faire réagir la page web en fonction des actions de l'utilisateur, stocker les informations dans le localStorage et mettre à jour le panier de l'utilisateur de manière dynamique. Enfin, mettre en place les Regexp pour assurer la fiabilité des informations du formulaire.",
 		"picture": "./assets/kanap.png"
 	},
 	{
 		"id": "6",
-		"name": "Hot Takes",
+		"name": "Hot Takes - Piiquante",
 		"languages": "Node.js, MongoDB, Express.js",
-		"languagesIcons": "fab fa-css3-alt fa-brands fa-sass",
+		"languagesIcons": "fa-brands fa-node",
 		"source": "https://github.com/dnguyenb/P6-hot-takes",
 		"info": "Construire le Backend d'un site internet de partage d'avis.Gérer les comptes utilisateurs,concevoir un site maintenable grâce à la gestion des erreurs et exceptions,créer, gérer et afficher le contenu d’une base de données. Apporter une attention particulière à la sécurité.",
 		"picture": "./assets/hot-takes.png"
@@ -50,9 +50,9 @@
 		"id": "7",
 		"name": "Kasa",
 		"languages": "React",
-		"languagesIcons": "fab fa-css3-alt fa-brands fa-sass",
+		"languagesIcons": "fa-brands fa-react",
 		"source": "https://github.com/dnguyenb/P7-kasa",
-		"info": "Créer une application web de location immobilière avec React.",
+		"info": "Créer une application web de location immobilière responsive avec React.",
 		"picture": "./assets/kasa.png"
 	}
 ]
