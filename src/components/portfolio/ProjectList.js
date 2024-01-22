@@ -1,26 +1,30 @@
-import React from 'react';
-import portfolioData from '../../data/portfolioData.json';
-import Project from './Project';
+import React, { Component } from 'react'
+import Project from './Project'
+import { portfolioData } from '../../data/portfolioData';
 
-const ProjectList = () => {
-	return (
-		<div className="portfolioContent">
-			<ul className="radioDisplay"></ul>
-			<div className="projects">
-				{portfolioData.map((project) => (
-					<Project
-						key={project.id}
-						name={project.name}
-						languages={project.languages}
-						languagesIcon={project.languagesIcons}
-						source={project.source}
-						info={project.info}
-						picture={project.picture}
-					/>
-				))}
-			</div>
-		</div>
-	);
-};
 
-export default ProjectList;
+export default class ProjectList extends Component {
+  state = {
+  projects : portfolioData
+}
+
+  render() {
+    let { projects } = this.state;
+
+    return (
+        <div className='projects'>
+        {
+          projects.map(item => {
+
+            return (
+              <Project
+                key={item.id}
+                item={item}
+              />
+            )
+          })
+          }
+      </div>
+    )
+  }
+}

@@ -1,23 +1,81 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
 
-const Project = ({
-	id,
-	cover,
-	name,
-	languages,
-	languagesIcons,
-	source,
-	info,
-	picture,
-}) => {
-	return (
-		<Link to={`/project/${id}`} className="project-card">
-			<img src={cover} alt={name} />
-            <h3 className="project-name">{name}</h3>
-            <span>{languages}</span>
-		</Link>
-	);
-};
+export default class componentName extends Component {
+	state = {
+		showInfo: false,
+	};
 
-export default Project;
+	handleInfo = () => {
+		this.setState({
+			showInfo: !this.state.showInfo,
+		});
+	};
+	deletePopUp = () => {
+		this.setState({
+			showInfo: false,
+		});
+	};
+
+	render() {
+		const { name, source, info, picture, video, link } =
+			this.props.item;
+
+		return (
+			<div className="project">
+				<h3>{name}</h3>
+				<div className="projectImg">
+					<img src={picture} onClick={this.handleInfo} alt="" />
+				</div>
+				<span className="infos" onClick={this.handleInfo}>
+					<i className="fas fa-plus-circle"></i>
+				</span>
+
+				{this.state.showInfo && (
+					<div className="showInfos" onClick={this.deletePopUp}>
+						<div className="infosContent">
+							<div className="head">
+								<h2>{name}</h2>
+								<div className="sourceCode">
+									<a
+										href={source}
+										rel="noopener noreferrer"
+										className="button"
+										target="_blank"
+									>
+										Code source
+									</a>
+								</div>
+							</div>
+
+							<p className="text">{info}</p>
+
+							{link && (
+								<div className="link">
+									<a href={link} target="_blank" rel="noopener noreferrer">
+										Lien vers le site
+									</a>
+								</div>
+							)}
+
+							{video && (
+								<div className="video">
+									<iframe
+										title={name}
+										src={video}
+										frameBorder="0"
+										allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+										allowFullScreen
+									></iframe>
+								</div>
+							)}
+
+							<div className="button return" onClick={this.handleInfo}>
+								Retourner sur la page
+							</div>
+						</div>
+					</div>
+				)}
+			</div>
+		);
+	}
+}
