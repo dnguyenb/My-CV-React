@@ -4,29 +4,28 @@ import { portfolioData } from '../../data/portfolioData';
 
 export default class ProjectList extends Component {
 	state = {
-		projects: portfolioData,
 		radios: [
-			{ id: 1, value: 'javascript' },
-      { id: 2, value: 'css' },
-      { id: 3, value: 'node.js' },    
-			{ id: 4, value: 'react' },
+			{ id: 1, value: 'react' },
+			{ id: 2, value: 'javascript' },
+			{ id: 3, value: 'sass' },
+			{ id: 4, value: 'css' },
+			{ id: 5, value: 'all' },
 		],
-		selectedRadio: 'javaScript', // de base celle-ci est selctionnée
+		projects: portfolioData,
+		selectedRadio: 'all',
 	};
 
 	handleRadio = (event) => {
 		let radio = event.target.value;
-		this.setState({ selectedRadio: radio }); // au clic, prend la valeur de radio
+		this.setState({ selectedRadio: radio });
 	};
 
 	render() {
 		let { projects, radios, selectedRadio } = this.state;
-    // projects : this.state.projects
 
 		return (
 			<div className="portfolioContent">
-        <ul className="radioDisplay">
-          
+				<ul className="radioDisplay">
 					{radios.map((radio) => {
 						return (
 							<li key={radio.id}>
@@ -40,17 +39,16 @@ export default class ProjectList extends Component {
 								/>
 								<label htmlFor={radio.value}>{radio.value}</label>
 							</li>
-						)
-          })
-          }
+						);
+					})}
 				</ul>
 
 				<div className="projects">
-          {projects
-            .filter(item => item.languages.includes(selectedRadio))
-            .map(item => {
-						return (<Project key={item.id} item={item} />)
-					})}
+					{projects
+						.filter((item) => item.languages.includes(selectedRadio))
+						.map((item) => {
+							return <Project key={item.id} item={item} />;
+						})}
 				</div>
 			</div>
 		);
