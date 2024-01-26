@@ -70,27 +70,27 @@
             .years {
                 font-size: .65rem;
                 display: flex;
-                justify-content: right;
+                justify-content: space-between;
                 color: $white;
 
                 span {
                     width: 38%;
 
                     &:nth-child(2) {
-                        text-align: center;
-                        width: 25%;
+                        text-align: right;
+                        width: 18%;
                     }
 
                     &:nth-child(3) {
-                        text-align: center;
-                        width: 25%;
+                        text-align: right;
+                        width: 44%;
                     }
 
-                    &:nth-child(4) {
-                        text-align: center;
-                        width: 25%;
+                    // &:nth-child(4) {
+                    //     text-align: center;
+                    //     width: 24%;
 
-                    }
+                    // }
 
                     &:nth-child(2)::before,
                     &:nth-child(3)::before,
