@@ -6,5 +6,7 @@
     "html.hover.documentation": false,
     "scss.hover.documentation": false,
     "less.hover.documentation": false,
-    "css.hover.documentation": false
+    "css.hover.documentation": false,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
